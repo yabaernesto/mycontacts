@@ -8,4 +8,18 @@ GET http://localhost:3000/contacts/7674cad4-7690-4cee-9ecb-4a810a7f9cec
 
 ###
 
+# Create Contact
+
+POST http://localhost:3000/contacts
+Content-Type: application/json
+
+{
+  "name": "Mateus",
+  "email": "mateus@gmail.com.ao",
+  "phone": "00010000110101",
+  "category_id": "S0118DN1D81DX1Q"
+}
+
+###
+
 DELETE http://localhost:3000/contacts/7674cad4-7690-4cee-9ecb-4a810a7f9cec
