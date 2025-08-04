@@ -1,0 +1,11 @@
+# List Contacts
+GET http://localhost:3000/contacts
+
+###
+
+# List Contact
+GET http://localhost:3000/contacts/7674cad4-7690-4cee-9ecb-4a810a7f9cec
+
+###
+
+DELETE http://localhost:3000/contacts/7674cad4-7690-4cee-9ecb-4a810a7f9cec
