@@ -22,4 +22,18 @@ Content-Type: application/json
 
 ###
 
+# Update Contact
+PUT http://localhost:3000/contacts/31267d8a-82b2-42a9-bc8a-0ae7f3e68dde
+Content-Type: application/json
+
+{
+  "name": "Mateus Silva",
+  "email": "mateus@gmail.com.ao",
+  "phone": "00010000110101",
+  "category_id": "S0118DN1D81DX1Q"
+}
+
+###
+
+# Delete Contact
 DELETE http://localhost:3000/contacts/7674cad4-7690-4cee-9ecb-4a810a7f9cec
