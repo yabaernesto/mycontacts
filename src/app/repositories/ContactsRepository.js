@@ -1,5 +1,7 @@
 const { randomUUID } = require('node:crypto')
 
+const db = require('../../database')
+
 let contacts = [
   {
     id: randomUUID(),
@@ -36,20 +38,15 @@ class ContactsRepository {
     ))
   }
 
-  create({ name, email, phone, category_id }) {
-    return new Promise((resolve) => {
-      const newContact = {
-        id: randomUUID(),
-        name,
-        email,
-        phone,
-        category_id
-      }
+  async create({ name, email, phone, category_id }) {
+    // SQL Injection - Injeção de SQL, permite com que o usuário force erros
+    const [row] = await db.query(`
+      INSERT INTO contacts(name, email, phone, category_id)
+      VALUES($1, $2, $3, $4)
+      RETURNING *
+    `, [name, email, phone, category_id])
 
-      contacts.push(newContact)
-
-      resolve(newContact)
-    })
+    return row
   }
 
   update(id, { name, email, phone, category_id }) {

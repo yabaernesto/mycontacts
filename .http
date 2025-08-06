@@ -4,7 +4,7 @@ GET http://localhost:3000/contacts
 ###
 
 # List Contact
-GET http://localhost:3000/contacts/7674cad4-7690-4cee-9ecb-4a810a7f9cec
+GET http://localhost:3000/contacts/4cb2b11b-8f6f-4121-9334-f1a87e5eb409
 
 ###
 
@@ -14,10 +14,9 @@ POST http://localhost:3000/contacts
 Content-Type: application/json
 
 {
-  "name": "Mateus",
-  "email": "mateus@gmail.com.ao",
-  "phone": "00010000110101",
-  "category_id": "S0118DN1D81DX1Q"
+  "name": "Ernesto",
+  "email": "ernestoFo@gmail.com.ao",
+  "phone": "00010000110101"
 }
 
 ###

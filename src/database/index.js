@@ -1,16 +1,19 @@
+require('dotenv').config()
 const { Client } = require('pg')
 
+const { env } = require('../env')
+
 const client = new Client({
-  host: 'localhost',
-  port: 5432,
-  user: 'root',
-  password: 'root',
-  database: 'mycontacts',
+  host: env.DATABASE_HOST,
+  port: env.DATABASE_PORT,
+  user: env.DATABASE_USER,
+  password: env.DATABASE_PASSWORD,
+  database: env.DATABASE_NAME,
 })
 
 client.connect()
 
-exports.query = async (query) => {
-  const { rows } = await client.query(query)
+exports.query = async (query, values) => {
+  const { rows } = await client.query(query, values)
   return rows
 }
