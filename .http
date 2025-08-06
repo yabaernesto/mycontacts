@@ -43,6 +43,11 @@ GET http://localhost:3000/categories
 
 ###
 
+# List Category
+GET http://localhost:3000/categories/24e25de4-ba0c-4526-885c-ec55ca3f4e4b
+
+###
+
 # Create Category
 POST http://localhost:3000/categories
 Content-Type: application/json
@@ -50,3 +55,18 @@ Content-Type: application/json
 {
   "name": "Linkedin"
 }
+
+### 
+
+# Update Category
+PUT http://localhost:3000/categories/24e25de4-ba0c-4526-885c-ec55ca3f4e4b
+Content-Type: application/json
+
+{
+  "name": "Comunidade Dev"
+}
+
+###
+
+# Delete Category
+DELETE http://localhost:3000/categories/72fa358f-f542-4db4-b90e-01b2a93d554e
