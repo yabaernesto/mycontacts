@@ -35,3 +35,18 @@ Content-Type: application/json
 
 # Delete Contact
 DELETE http://localhost:3000/contacts/7674cad4-7690-4cee-9ecb-4a810a7f9cec
+
+###
+
+# List Categories
+GET http://localhost:3000/categories
+
+###
+
+# Create Category
+POST http://localhost:3000/categories
+Content-Type: application/json
+
+{
+  "name": "Linkedin"
+}
