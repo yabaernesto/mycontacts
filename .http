@@ -22,14 +22,13 @@ Content-Type: application/json
 ###
 
 # Update Contact
-PUT http://localhost:3000/contacts/31267d8a-82b2-42a9-bc8a-0ae7f3e68dde
+PUT http://localhost:3000/contacts/7bbc6b25-83b7-4608-a85e-ffb406ceb9a2
 Content-Type: application/json
 
 {
-  "name": "Mateus Silva",
-  "email": "mateus@gmail.com.ao",
-  "phone": "00010000110101",
-  "category_id": "S0118DN1D81DX1Q"
+  "name": "Yaba Ernesto",
+  "email": "yaba@gmail.com.ao",
+  "phone": "00010000110101"
 }
 
 ###
